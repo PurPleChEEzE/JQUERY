@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ex01_jQuery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
@@ -60,6 +60,48 @@
         //jQuery방식
         const textColorGreen = $(".text-color-green");
         textColorGreen.css("color", "green");
+        
+
+        $("p").css("color", "blue");
     </script>
+
+    <div>
+        <ul>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li class="div-list">리스트3</li>
+            <li class="div-list">리스트4</li>
+            <li>
+                <h3>후손 리스트</h3>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $("ul > li").css("color", "green");
+        $("ul h3").css("color", "red");
+    </script>
+
+    <hr>
+    
+    <input type="text"> <br>
+    <input type="checkbox"> <br>
+    <input type="button"> <br>
+
+    <script>
+        $("input[type=text]").val("값");
+        console.log($("input[type=checkbox]"));
+        $("input[type=checkbox]").attr("checked", true);
+
+        $("input[type=button]")
+        .css("width", "100px")
+        .css("height",  "100px")
+        .val("버튼");
+
+        // $("input[type=button]")
+        // .css({width:"100px", height:"100px"})
+        // .val("버튼");
+    </script>
+
 </body>
 </html>
