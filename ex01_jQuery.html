@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 </head>
 <body>
     <!-- 
@@ -21,12 +22,44 @@
     -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", function(){
-            const testSpan = document.getElementById("text-span");
-            tessstSpan.innerHTML = "변경됨;"
+        // <기존방식>
+        // document.addEventListener("DOMContentLoaded", function(){
+        //     const testSpan = document.getElementById("text-span");
+        //     tessstSpan.innerHTML = "변경됨;"
+        // })
+
+        // <jQuery방식>
+        // JQuery(document).ready(function(){
+        //     실행할 코드
+        // })
+
+        // $(document).ready(function(){
+        //     실행할 코드
+        // })
+
+        $(function(){
+            const testSpan = $("#text-span");
+            testSpan.html("변경됨");
         })
     </script>
 
     <span id="text-span">Hello, jQuery!</span>
+
+    <hr>
+    
+    <p class="text-color-green">텍스트1</p>
+    <p class="text-color-green">텍스트2</p>
+    <p class="text-color-green">텍스트3</p>
+    <script>
+        //자바스크립트 방식
+        // const textColorGreen = document.getElementsByClassName("text-color-green");
+        // for(let i=0; i<textColorGreen.length; i++){
+        //     textColorGreen[i].style.color = "green";
+        // }
+
+        //jQuery방식
+        const textColorGreen = $(".text-color-green");
+        textColorGreen.css("color", "green");
+    </script>
 </body>
 </html>
