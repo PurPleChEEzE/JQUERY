@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>"></script>
+</head>
+<body>
+    <!-- 
+        <jQuery>
+        JavaScript의 라이브러리(jQuery = 언어가아님)
+        
+        기존의 자바스크립트 문법들을 간소화 + 기능을 추가
+
+        <장점>
+        DOM 요소와 관련된 것들은 자바스크립트보다 쉽게 구현 가능
+        ajax, 이벤트 등 다양한 기능을 지원
+        플러그인, 오픈api 등을 지원
+    
+    -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const testSpan = document.getElementById("text-span");
+            tessstSpan.innerHTML = "변경됨;"
+        })
+    </script>
+
+    <span id="text-span">Hello, jQuery!</span>
+</body>
+</html>
